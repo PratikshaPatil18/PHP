@@ -1,0 +1,17 @@
+<?php
+class A {
+ function base(){
+  echo"Calling from Parent class.<br>";
+ }
+}
+class B extends A{
+function child(){
+ echo"Calling from Child class.";
+ }
+}
+$obj=new A();
+$obj1=new B();
+$obj->base();
+$obj1->child();
+
+?>
