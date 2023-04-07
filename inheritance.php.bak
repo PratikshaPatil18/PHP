@@ -1,0 +1,35 @@
+<?php
+class inheritance{
+	public $name;
+	public $age;
+	public $salary;
+ function __construct($n,$a,$s){
+		$this->name=$n;
+		$this->age=$a;
+		$this->salary=$s;
+	}
+ function emp(){
+	 echo "****Employee Details****<br>";
+	 echo"Name :".$this->name."<br>";
+	 echo"Age :".$this->age."<br>";
+	 echo"Salary :".$this->salary."<br>";
+ }
+}
+class manager extends inheritance{
+	 public $ta=1000;
+	 public $phone=300;
+	 public $totalsalary;
+	 
+ function mng(){
+	 $this->totalsalary=$this->salary+$this->ta+$this->phone;
+	 echo "****Manager Details****<br>";
+	 echo"Name :".$this->name."<br>";
+	 echo"Age :".$this->age."<br>";
+	 echo"Salary :".$this->totalsalary."<br>";
+  }
+ }
+$obj=new inheritance('darshan',22,15000);
+$obj1=new manager('chetan',20,20000);
+$obj->emp();
+$obj1->mng();
+?>
