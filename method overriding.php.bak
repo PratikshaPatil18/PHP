@@ -1,0 +1,34 @@
+<?php
+
+class overriding
+{
+ public $l;
+ public $b;
+ function __construct($l,$b)
+ {
+  $this->l=$l;
+  $this->b=$b;
+ }
+ public function display()
+ {
+ echo 'length :{$this->l} , breadth :{$this->b}';
+ }
+}
+class method extends overriding
+{
+
+ public $h;
+ function __construct($l,$b,$h)
+ {
+  $this->l=$l;
+  $this->b=$b;
+  $this->h=$h;
+ }
+ public function display()
+ {
+ echo 'length :{$this->l} , breadth :{$this->b} , height :{this->h}';
+ }
+}
+$obj=new method(2,3,4);
+$obj->display();
+?>
