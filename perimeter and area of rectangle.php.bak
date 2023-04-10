@@ -1,0 +1,22 @@
+<?php
+//calculate perimeter and area of rectangle with 2 properties.
+class Rectangle
+{
+ public $length=0;
+ public $width=0;
+ 
+ function area()
+ {
+	return($this->length*$this->width);
+ }
+ function perimeter()
+ {
+	 return(2*$this->length*$this->width);
+ }
+}
+$obj1=new Rectangle();
+$obj1->length=20;
+$obj1->width=10;
+echo"Area of Rectangle :".$obj1->area()."<br>";
+echo"Perimeter of rectangle :".$obj1->perimeter();
+?>
